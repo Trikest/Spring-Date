@@ -1,3 +1,12 @@
+package com.postgre.nuvem.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import  com.postgre.nuvem.repository.*;
+import  com.postgre.nuvem.model.*;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class ClienteService {
 
@@ -11,7 +20,7 @@ public class ClienteService {
 
     // Método para buscar todos os clientes
     public List<Cliente> listarClientes() {
-        return clienteRepository.findAll();
+        return (List<Cliente>) clienteRepository.findAll();
     }
 
     // Método para buscar um cliente por ID
